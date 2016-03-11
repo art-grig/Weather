@@ -1,0 +1,12 @@
+<form ng-controller="PostcodeCtrl" role="form" class="animated fadeInUp animation-delay-8">
+    <div class="form-group">
+        <label for="InputPostCode">Enter PostCode<sup>*</sup></label>
+        <input type="text" required="true" class="form-control" id="InputPostCode" ng-model="data.postcode" value="{{data.postcode}}">
+    </div>
+    <ul>
+        <li>temperature: {{temp}}</li>
+        <li>overall: {{description}}</li>
+        <li>pressure: {{pressure}}</li>
+    </ul>
+    <button type="submit" ng-click="refresh()" class="btn btn-ar btn-primary pull-right">Get Weather!</button>
+</form>

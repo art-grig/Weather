@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>yourWeatherApp</title>
+  <link href="assets/css/preload.css" rel="stylesheet">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link href="assets/css/vendors.css" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <!--<ul class="menu">
+    <li><a href="#/mapView">mapView</a></li>
+    <li><a href="#/postcodeView">postcodeView</a></li>
+  </ul>-->
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!--<div ng-view></div>-->
+
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <div>
+    <div class="login-form-full">
+      <div class="fix-box">
+        <div class="text-center title-logo animated fadeInDown animation-delay-5">your<span>Weather</span></div>
+        <div class="transparent-div no-padding">
+          <ul class="nav nav-tabs nav-tabs-transparent">
+            <li class=""><a href="#/mapView">by location</a></li>
+            <li class=""><a href="#/postcodeView" >by postcode</a></li>
+          </ul>
+          <script>
+
+          </script>
+          <div class="tab-content ">
+            <div class="tab-pane active" ng-view>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <div>weather app: v<span app-version></span></div>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/js/vendors.js"></script>
+  <script src="app.js"></script>
+  <script src="mapView/mapService.js"></script>
+  <script src="mapView/mapView.js"></script>
+  <script src="postcodeView/postcodeView.js"></script>
+  <script src="components/weatherApi/weatherApiService.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://maps-api-ssl.google.com/maps/api/js?libraries=places"></script>
+</body>
+</html>
